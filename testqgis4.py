@@ -196,7 +196,7 @@ class TestQGIS4:
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop
-        result = self.dlg.exec_()
+        result = self.dlg.exec()
         # See if OK was pressed
         if result:
             # Do something useful here - delete the line containing pass and
@@ -204,7 +204,7 @@ class TestQGIS4:
             pass
 
     def import_file(self):
-        result = self.fileDialog.exec_()
+        result = self.fileDialog.exec()
         self.dlg.pushButtonOpen.setEnabled(True)
         self.folderPath = self.fileDialog.selectedFiles()
         if result == 1:
