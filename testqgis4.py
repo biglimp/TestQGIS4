@@ -204,6 +204,8 @@ class TestQGIS4:
             pass
 
     def import_file(self):
+        # the two lines below initiates the crash using QGIS4 (Win10, not Ubuntu). Works on QGIS3
+        self.fileDialog.open()
         result = self.fileDialog.exec()
         self.dlg.pushButtonOpen.setEnabled(True)
         self.folderPath = self.fileDialog.selectedFiles()
